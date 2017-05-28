@@ -1,8 +1,8 @@
 // Cache names
 
-var dataCacheName = 'TODOData-v1.1.4'
+var dataCacheName = 'TODOData-v1.1.5'
 
-var cacheName = 'todoPWA-1.5'
+var cacheName = 'todoPWA-1.6'
 
 // Application shell files to be cached
 
@@ -91,7 +91,5 @@ self.addEventListener('fetch', function (e) {
                      return response || fetch(e.request)
 
              })
-
        )
-
 })
