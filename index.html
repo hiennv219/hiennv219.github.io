@@ -1,1 +1,139 @@
-Simon Nguyen
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      max-width: 520px;
+      margin: auto;
+    }
+
+    section {
+      background: #f1e1ca;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* height: 100vh; */
+      text-align: center;
+      position: relative;
+    }
+
+    .cover {
+      background: #9b1f21;
+    }
+
+    img {
+      width: 100%;
+      /* height: 100%;
+      object-fit: cover; */
+    }
+
+    .cover img {
+      width: 100%;
+      height: 100%;
+      margin-top: 50%;
+      object-fit: cover;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 18%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffba00;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.3;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+
+    .slider img {
+      scroll-snap-align: center;
+      min-width: 100%;
+    }
+
+    .event-time, .locations, .qr-section {
+      padding: 20px;
+    }
+
+    .event-time {
+      font-size: 24px;
+    }
+
+    .locations a {
+      display: block;
+      margin: 10px 0;
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .qr-section img.qrcode {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+    }
+
+    .thank-you {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <img src="cover.png" alt="First full screen image" />
+    <div class="text-overlay">
+      Trung Chiến<br />
+      Quỳnh Anh<br />
+      26.11.2024
+    </div>
+  </section>
+
+  <section class="letter">
+    <img src="letter.jpeg" alt="Second full screen image" />
+  </section>
+
+  <section class="slider">
+    <img src="slider1.png" alt="Slide 1" />
+    <img src="slider2.png" alt="Slide 2" />
+    <img src="slider3.png" alt="Slide 3" />
+  </section>
+
+  <section class="event-time">
+    <p>Event Time: 25th December 2024, 10:00 AM</p>
+  </section>
+
+  <section>
+    <img src="letter-line.png" alt="Send-a-gif" />
+  </section>
+  <section class="qr-section">
+    <div>
+      <img class="qrcode" src="qrcode1.png" alt="QR Code 1" />
+      <p>Nguyen Trung Chien</p>
+      <p>123456789</p>
+    </div>
+    <div>
+      <img class="qrcode" src="qrcode2.png" alt="QR Code 2" />
+      <p>Nguyen Quynh Anh</p>
+      <p>123456789</p>
+    </div>
+  </section>
+
+  <section class="locations">
+    <a href="https://maps.google.com?q=Location+A" target="_blank">Location A</a>
+    <a href="https://maps.google.com?q=Location+B" target="_blank">Location B</a>
+  </section>
+
+  <section class="thank-you">
+    <img src="end.jpeg" alt="Thank you" />
+  </section>
+</body>
+</html>
