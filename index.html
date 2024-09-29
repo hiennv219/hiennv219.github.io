@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trung Chiến - Quỳnh Anh</title>
+  <title>Văn Hiến - Ngọc Ánh</title>
   <style>
     body {
       margin: 0;
@@ -17,23 +17,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      /* height: 100vh; */
       text-align: center;
       position: relative;
     }
 
     img {
       width: 100%;
-      /* height: 100%;
-      object-fit: cover; */
     }
-
-    /* .cover img {
-      width: 100%;
-      height: 100%;
-      margin-top: 50%;
-      object-fit: cover;
-    } */
 
     .letter img {
       margin-top: 50px;
@@ -67,7 +57,6 @@
       scroll-snap-align: center;
     }
 
-    /* Navigation buttons */
     .slider-nav {
       position: absolute;
       top: 50%;
@@ -87,7 +76,7 @@
     }
 
     .letter-line {
-      padding: 30px;
+      padding: 30px auto;
     }
 
     .qr-section {
@@ -112,6 +101,13 @@
       font-weight: bold;
       color: #ff5722;
     }
+    .locations a {
+      margin: 30px;
+    }
+
+    .contact .phone {
+
+    }
   </style>
 </head>
 <body>
@@ -132,14 +128,31 @@
     <div class="slider-nav left" onclick="moveSlide(-1)">&#10094;</div>
     <div class="slider-nav right" onclick="moveSlide(1)">&#10095;</div>
   </section>
+  
+  <section class="letter-line">
+    <img src="line2.png" alt="Send-a-gif" />
+  </section>
 
   <section class="event-time">
-    <p>Countdown:</p>
+    <b>Cùng đếm ngược thời gian:</b>
+  </section>
+  <section class="event-time">
     <div id="countdown">
-      <span id="days"></span> days
-      <span id="hours"></span> hours
+      <span id="days"></span> ngày
+      <span id="hours"></span> giờ
     </div>
   </section>
+
+  <section class="letter-line">
+    <img src="line2.png" alt="Send-a-gif" />
+  </section>
+
+  <section>
+    <p>Thông tin phản hồi</p>
+    <p>Để thuận tiện cho việc sắp xếp chỗ ngồi, vui lòng phản hồi giúp vợ chồng mình nhé!</p>  
+  </section>
+
+
 
   <section class="letter-line">
     <img src="letter-line.png" alt="Send-a-gif" />
@@ -161,9 +174,20 @@
   </section>
 
   <section class="locations">
-    <a href="https://maps.google.com?q=Location+A" target="_blank">Location A</a>
-    <a href="https://maps.google.com?q=Location+B" target="_blank">Location B</a>
+    <a href="https://maps.app.goo.gl/QKwVNDpTiN8DNA7R6" target="_blank">
+      <p>Nhà trai:</p>
+      <p>Thôn Chùa, Xã An Châu, Tp. HD</p>
+    </a>
+    <a href="https://maps.app.goo.gl/1CGnpV8DYcFiUtVq7" target="_blank">
+      <p>Nhà gái:</p>
+      <p>Thôn Đức Thịnh, Xã Tản Lĩnh, Ba Vì</p>
+    </a>
   </section>
+
+  <!-- <section class="contact">
+    <img class="phone" src="call2.jpeg"/>
+    <img class="phone" src="call2.jpeg"/>
+  </section> -->
 
   <section class="thank-you">
     <img src="end.jpg" alt="Thank you" />
