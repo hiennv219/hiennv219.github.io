@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Page</title>
+  <title>Trung Chiến - Quỳnh Anh</title>
   <style>
     body {
       margin: 0;
@@ -13,7 +13,7 @@
     }
 
     section {
-      background: #f1e1ca;
+      background: #fff4e7;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -22,21 +22,21 @@
       position: relative;
     }
 
-    .cover {
-      background: #9b1f21;
-    }
-
     img {
       width: 100%;
       /* height: 100%;
       object-fit: cover; */
     }
 
-    .cover img {
+    /* .cover img {
       width: 100%;
       height: 100%;
       margin-top: 50%;
       object-fit: cover;
+    } */
+
+    .letter img {
+      margin-top: 50px;
     }
 
     .text-overlay {
@@ -61,44 +61,41 @@
       min-width: 100%;
     }
 
-    .event-time, .locations, .qr-section {
-      padding: 20px;
+    .letter-line {
+      padding: 30px;
     }
 
-    .event-time {
-      font-size: 24px;
+    .qr-section {
+      padding: 15px;
     }
-
-    .locations a {
-      display: block;
-      margin: 10px 0;
-      color: blue;
-      text-decoration: underline;
-    }
-
     .qr-section img.qrcode {
-      width: 150px;
-      height: 150px;
-      margin: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px 5px rgba(208, 208, 208, 0.6);
     }
 
     .thank-you {
       font-size: 20px;
+    }
+
+    .event-time {
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff5722;
     }
   </style>
 </head>
 <body>
   <section class="cover">
     <img src="cover.png" alt="First full screen image" />
-    <div class="text-overlay">
-      Trung Chiến<br />
-      Quỳnh Anh<br />
-      26.11.2024
-    </div>
   </section>
 
   <section class="letter">
-    <img src="letter.jpeg" alt="Second full screen image" />
+    <img src="letter.jpg" alt="Second full screen image" />
   </section>
 
   <section class="slider">
@@ -108,22 +105,29 @@
   </section>
 
   <section class="event-time">
-    <p>Event Time: 25th December 2024, 10:00 AM</p>
+    <p>Countdown:</p>
+    <div id="countdown">
+      <span id="days"></span> days
+      <span id="hours"></span> hours
+    </div>
   </section>
 
-  <section>
+  <section class="letter-line">
     <img src="letter-line.png" alt="Send-a-gif" />
   </section>
   <section class="qr-section">
     <div>
       <img class="qrcode" src="qrcode1.png" alt="QR Code 1" />
-      <p>Nguyen Trung Chien</p>
-      <p>123456789</p>
+      <p><b>Nguyen Van Hien</b></p>
+      <span>19029824148669</span>
     </div>
+  </section>
+
+  <section class="qr-section">
     <div>
       <img class="qrcode" src="qrcode2.png" alt="QR Code 2" />
-      <p>Nguyen Quynh Anh</p>
-      <p>123456789</p>
+      <p><b>Nguyen Ngoc Anh</b></p>
+      <span>19029824148669</span>
     </div>
   </section>
 
@@ -133,7 +137,23 @@
   </section>
 
   <section class="thank-you">
-    <img src="end.jpeg" alt="Thank you" />
+    <img src="end.jpg" alt="Thank you" />
   </section>
+  <script>
+    const eventDate = new Date("December 26, 2024 00:00:00").getTime();
+
+    const countdownFunction = setInterval(function () {
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      if (timeLeft < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "Event started!";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
